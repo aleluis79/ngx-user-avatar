@@ -1,6 +1,6 @@
 {
   "name": "ngx-user-avatar",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^19.1.0",
     "@angular/core": "^19.1.0"
@@ -8,5 +8,15 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "license": "MIT",
+  "author": {
+    "name": "Ngx User Avatar",
+    "url": "https://github.com/aleluis79/ngx-user-avatar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aleluis79/ngx-user-avatar"
+  }
+
 }

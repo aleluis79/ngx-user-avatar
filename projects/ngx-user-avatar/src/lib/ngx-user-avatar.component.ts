@@ -1,4 +1,4 @@
-import { Component, computed, input, Input, output, signal } from '@angular/core';
+import { Component, computed, input, output, signal } from '@angular/core';
 
 @Component({
   selector: 'ngx-user-avatar',
@@ -8,6 +8,10 @@ import { Component, computed, input, Input, output, signal } from '@angular/core
       [style.backgroundColor]="backgroundColor()"
       [style.color]="color()"
       [style.opacity]="isActive() ? 0.7 : 1"
+      [style.width.px]="size()"
+      [style.height.px]="size()"
+      [style.lineHeight.px]="size()"
+      [style.fontSize.px]="countInitials() == 1 ? size() * 0.8 : countInitials() == 2 ? size() * 0.5 : size() * 0.35"
       (mousedown)="isActive.set(true)"
       (mouseup)="isActive.set(false)"
       (click)="click.emit()">
@@ -15,17 +19,17 @@ import { Component, computed, input, Input, output, signal } from '@angular/core
     </p>
   `,
   styles: `
+
     p {
+      margin: 0;
+      padding: 0;
       display: inline-block;
-      width: 50px;
-      height: 50px;
       border-radius: 50%;
       text-align: center;
-      line-height: 50px;
       user-select: none;
       font-family: Arial, sans-serif;
-      font-size: 16px;
       font-weight: bold;
+      overflow: hidden;
     }
 
     p:hover {
@@ -35,12 +39,14 @@ import { Component, computed, input, Input, output, signal } from '@angular/core
 })
 export class NgxUserAvatarComponent {
   fullname = input.required<string>({ alias: 'fullname' })
-  color = input<string>('#f0f0f0')
+  color = input<string>('gray')
+  backgroundColor = input<string>('#f0f0f0')
+  size = input<number>(50)
   click = output<void>();
 
   isActive = signal(false);
-  backgroundColor = input<string>('#f0f0f0')
-  userInitials = computed(() => this.fullname().split(' ').map(name => name[0]).join(''))
+  userInitials = computed(() => this.fullname().trim().split(' ').map(name => name[0].toUpperCase()).join(''))
+  countInitials = computed(() => this.fullname().split(' ').length)
 
   backgrountTransparent() {
     return this.backgroundColor().replace(')', ', 0.5)').replace('rgb', 'rgba')

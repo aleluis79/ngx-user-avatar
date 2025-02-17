@@ -1,9 +1,23 @@
 <div>
+
   <ngx-user-avatar
-    fullname="Alejandro Luis"
+    fullname="John Doe"
+    [size]="30"
+    (click)="onClick()" />
+
+  <ngx-user-avatar
+    fullname="Juan Dela Cruz"
     color="white"
     backgroundColor="blueviolet"
-    (click)="onClick()"
-    />
+    [size]="50"
+    (click)="onClick()" />
+
+  <ngx-user-avatar
+    fullname="Maria"
+    color="snow"
+    backgroundColor="darkblue"
+    [size]="70"
+    (click)="onClick()" />
+
 </div>
 <router-outlet />
