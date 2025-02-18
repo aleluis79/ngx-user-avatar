@@ -1,6 +1,16 @@
 {
   "name": "ngx-user-avatar",
-  "version": "0.0.3",
+  "description": "User avatar component for angular app.",
+  "version": "0.0.4",
+  "keywords": [
+    "angular",
+    "avatar",
+    "avatars",
+    "badge",
+    "gravatar",
+    "component",
+    "initials"
+  ],
   "peerDependencies": {
     "@angular/common": "^19.1.0",
     "@angular/core": "^19.1.0"
