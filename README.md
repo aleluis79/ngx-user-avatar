@@ -1,4 +1,10 @@
-# NgxUserAvatar
+## &lt;ngx-user-avatar&gt;
+[![npm version](https://badge.fury.io/js/ngx-user-avatar.svg)](https://badge.fury.io/js/ngx-user-avatar.svg) 
+[![npm](https://img.shields.io/npm/d18m/ngx-user-avatar.svg)](https://www.npmjs.com/package/ngx-user-avatar) 
+![size](https://img.shields.io/bundlephobia/minzip/ngx-user-avatar.svg)
+
+## NPM Project
+[ngx-user-avatar](https://www.npmjs.com/package/ngx-user-avatar)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
 
