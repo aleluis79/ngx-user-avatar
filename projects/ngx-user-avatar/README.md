@@ -1,14 +1,29 @@
-# NgxUserAvatar
+## &lt;ngx-user-avatar&gt;
+[![npm version](https://badge.fury.io/js/ngx-user-avatar.svg)](https://badge.fury.io/js/ngx-user-avatar.svg) 
+[![npm](https://img.shields.io/npm/d18m/ngx-user-avatar.svg)](https://www.npmjs.com/package/ngx-user-avatar) 
+![size](https://img.shields.io/bundlephobia/minzip/ngx-user-avatar.svg)
 
 ## Install
-
-    npm install ngx-user-avatar
-
+```shell
+npm install ngx-user-avatar
+```
 ## Usage
 
-    import { NgxUserAvatarComponent } from 'ngx-user-avatar'
-    <ngx-user-avatar fullname="John Doe" (click)="onClick()" />
 
+### Component
+```typescript
+import { NgxUserAvatarComponent } from 'ngx-user-avatar'
+
+@Component({
+  ...
+  imports: [ NgxUserAvatarComponent ],
+  ...
+})
+```
+### Template html
+```html
+<ngx-user-avatar fullname="John Doe" (click)="onClick()" />
+```
 ## Props
 
 | Prop            	| Type   	| Default 	| Required 	|
